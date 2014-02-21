@@ -14,4 +14,13 @@ class JogoTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals(0, $jogo->pontos);
     }
+
+    public function testDeveRetornarResultado40QuantoTodasJogadas2()
+    {
+        $jogo = new Jogo;
+
+        for($x = 0; $x < 10; $x++) {
+            $this->assertEquals(40, $jogo->pontos);
+        }
+    }
 }
