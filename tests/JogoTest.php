@@ -21,13 +21,13 @@ class JogoTest extends PHPUnit_Framework_TestCase
     public function testDeveRetornarResultado0QuandoTodasBolasNaCanaleta()
     {
         $this->lancar(0, 0, 10);
-        $this->assertEquals(0, $this->jogo->pontos);
+        $this->assertEquals(0, $this->jogo->getPontos());
     }
 
     public function testDeveRetornarResultado40QuantoTodasJogadas2()
     {
         $this->lancar(2, 2, 10);
-        $this->assertEquals(40, $this->jogo->pontos);
+        $this->assertEquals(40, $this->jogo->getPontos());
     }
 
     /**
@@ -43,6 +43,6 @@ class JogoTest extends PHPUnit_Framework_TestCase
         $this->lancar(2, 8, 1);
         $this->lancar(2, 2, 9);
 
-        $this->assertEquals(48, $this->jogo->pontos);
+        $this->assertEquals(48, $this->jogo->getPontos());
     }
 }
