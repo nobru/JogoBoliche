@@ -37,4 +37,12 @@ class JogoTest extends PHPUnit_Framework_TestCase
     {
         $this->lancar(0, 0, 11);
     }
+
+    public function testdeveRetornar48QuandoPrimeiroLanceSpareSeguintesDerrubando2PinosEmCadaJogada()
+    {
+        $this->lancar(2, 8, 1);
+        $this->lancar(2, 2, 9);
+
+        $this->assertEquals(48, $this->jogo->pontos);
+    }
 }
