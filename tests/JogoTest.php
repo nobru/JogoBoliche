@@ -29,4 +29,12 @@ class JogoTest extends PHPUnit_Framework_TestCase
         $this->lancar(2, 2, 10);
         $this->assertEquals(40, $this->jogo->pontos);
     }
+
+    /**
+     * @expectedException Exception
+     */
+    public function testDeveRetornarErroQuandoJogadasMaiorQue10()
+    {
+        $this->jogo->lancar(0, 0, 11);
+    }
 }
