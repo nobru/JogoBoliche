@@ -20,7 +20,9 @@ class JogoTest extends PHPUnit_Framework_TestCase
         $jogo = new Jogo;
 
         for($x = 0; $x < 10; $x++) {
-            $this->assertEquals(40, $jogo->pontos);
+            $jogo->lancar(2, 2);
         }
+
+        $this->assertEquals(40, $jogo->pontos);
     }
 }
