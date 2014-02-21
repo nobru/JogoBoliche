@@ -35,6 +35,6 @@ class JogoTest extends PHPUnit_Framework_TestCase
      */
     public function testDeveRetornarErroQuandoJogadasMaiorQue10()
     {
-        $this->jogo->lancar(0, 0, 11);
+        $this->lancar(0, 0, 11);
     }
 }
